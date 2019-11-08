@@ -1,0 +1,8 @@
+[
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "/var/scripts/redeploy.sh",
+    "command-working-directory": "/var/webhook",
+    "response-message": "I got the payload!"
+  }
+]

@@ -1,0 +1,18 @@
+- id: test-hook
+  execute-command: "/var/scripts/harbor_webhook_test.py"
+  command-working-directory: /var/webhook
+  incoming-payload-content-type: 'application/json'
+  include-command-output-in-response: true
+  include-command-output-in-response-on-error: true
+  response-message: I got the payload!
+  response-headers:
+    - name: Access-Control-Allow-Origin
+      value: '*'
+  pass-arguments-to-command:
+    - source: entire-payload
+#    - source: payload
+#      name: type
+#    - source: payload
+#      name: event_data.resources.0.resource_url
+#    - source: string
+#      name: '{type: jason}'

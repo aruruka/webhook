@@ -1,0 +1,12 @@
+- id: test-hook
+  execute-command: "/var/scripts/store_payload_test.sh"
+  command-working-directory: /var/webhook
+  incoming-payload-content-type: 'application/json'
+  response-message: I got the payload!
+  response-headers:
+    - name: Access-Control-Allow-Origin
+      value: '*'
+  include-command-output-in-response: true
+  include-command-output-in-response-on-error: true
+  pass-arguments-to-command:
+    - source: entire-payload

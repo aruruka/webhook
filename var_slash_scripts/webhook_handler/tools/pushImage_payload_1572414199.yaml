@@ -1,0 +1,27 @@
+{
+  "type": "pushImage",
+  "occur_at": 1572414199,
+  "event_data": {
+    "resources": [
+    {
+      "digest": "sha256:a36b9e68613d07eec4ef553da84d0012a5ca5ae4a830cf825bb68b929475c869",
+      "tag": "7",
+      "resource_url": "harbor.sunvalley.com.cn/library/centos:7"
+    },
+    {
+      "digest": "sha256:a36b9e68613d07eec4ef553da84d0012a5ca5ae4a830cf825bb68b929475c869",
+      "tag": "8",
+      "resource_url": "harbor.sunvalley.com.cn/library/centos:8"
+    }
+    ],
+
+    "repository": {
+      "date_created": 1572414199,
+      "name": "centos",
+      "namespace": "library",
+      "repo_full_name": "library/centos",
+      "repo_type": "public"
+    }
+  },
+  "operator": "robot$library-robot"
+}
