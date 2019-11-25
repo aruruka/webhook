@@ -19,8 +19,8 @@ class OSCommand:
 
     def run(self):
         # print(self.command_line)
-        return subprocess.run(self.command_line, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         # self.output, self.error_output, self.return_code = p.stdout, p.stderr, p.returncode
+        return subprocess.run(self.command_line, capture_output=True)
 
 
 def unique(repetitive_list):

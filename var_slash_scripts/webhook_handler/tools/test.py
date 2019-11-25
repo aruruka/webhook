@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # bug-report: keraymondyan69gmail.com
-import glob
-
-import yaml
-
-import utils
 
 if __name__ == '__main__':
     # payload_json = """
@@ -35,6 +30,7 @@ if __name__ == '__main__':
     # stream = open('{0}_{1}_{2}.{3}'.format('pushImage', 'payload', '1573109368', 'yaml', 'w')
     # print('{0}_{1}_{2}.{3}'.format('pushImage', 'payload', '1572414199', 'yaml'))
     # yaml.dump(payload, stream)
+    '''
     event_type = 'pushImage'
     payload_iter = glob.iglob('{0}_{1}_*{2}'.format(event_type, 'payload', 'yaml'))
     task_payloads = {}
@@ -47,3 +43,17 @@ if __name__ == '__main__':
         task_payloads[file] = unique_resource_urls
     for task in task_payloads:
         print(task, '\t', task_payloads[task])
+    '''
+
+
+    command = 'ls -lh ./file_not_exist'.split(' ')
+    print(command)
+    cp = utils.OSCommand(command).run()
+    # print(type(cp))
+    # print(dir(cp))
+    print(vars(cp))
+    result = []
+    if cp.stderr:
+        result.append(cp.stderr)
+    elif cp.stdout:
+        result += cp.stdout + resource['resource_url']
