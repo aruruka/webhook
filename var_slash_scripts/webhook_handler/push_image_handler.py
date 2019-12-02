@@ -37,6 +37,9 @@ class Handler(BasicHandler):
         if any serialized file exist, if yes, re-run this script.
         3. Do the logic.
         """
+        #TODO: load token from file and compare it with the token from request
+        pass
+
         if self.event_type == 'pushImage':
             # First, load serialized payloads from disk.
             payload_iter = glob.iglob('{0}_{1}_*.{2}'.format(self.event_type, 'payload', 'yaml'))
