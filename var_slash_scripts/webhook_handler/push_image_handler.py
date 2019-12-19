@@ -1,6 +1,9 @@
+'''
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # bug-report: keraymondyan69gmail.com
+'''
+
 import glob
 from typing import List, Any, Dict
 
@@ -37,7 +40,7 @@ class Handler(BasicHandler):
         if any serialized file exist, if yes, re-run this script.
         3. Do the logic.
         """
-        #TODO: load token from file and compare it with the token from request
+        # TODO: load token from file and compare it with the token from request
         pass
 
         if self.event_type == 'pushImage':
